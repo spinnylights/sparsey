@@ -1,0 +1,6 @@
+.sass-cache
+capybara-*.html
+.rspec
+.rvmrc
+/.bundle
+/articles/*
