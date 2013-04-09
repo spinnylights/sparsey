@@ -1,26 +1,21 @@
 require 'spec_helper'
+include ViewHelpers
 
-describe "posts", type: :feature do
-  require 'capybara/dsl'
-  include Capybara::DSL
-  Capybara.app = Sparsey
+describe 'post.erb', type: :feature do
+  set_up_capybara
+  post_environment(post_title, post_date, post_content, post_slug)
+  
+  before(:each) { visit "/#{post_slug}" }
 
-  before do
-    require 'ostruct'
+  describe 'its page' do
+    it 'has only one post' do
+      Capybara.match = :one
 
-    post = OpenStruct.new
-    post.title   = "Wig Wag"
-    post.date    = Time.parse "2013-04-09"
-    post.content = "Wiggy waggy wag wag wag."
+      page.should have_selector('.//article')
+    end
 
-    Sparsey.posts << post
+    it 'has the post\'s content' do
+      page.should have_text post_title, post_date, post_content
+    end
   end
-
-  before(:each) do
-    visit '/'
-  end
-
-  it "displays posts" do
-   page.should have_selector('//article')
-  end
-end 
+end

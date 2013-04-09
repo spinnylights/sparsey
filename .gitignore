@@ -3,5 +3,5 @@
 .rvmrc
 /.bundle
 /posts/*
-save_page/
+/spec/save_page/*
 *.swp
