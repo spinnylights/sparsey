@@ -1,6 +1,7 @@
 .sass-cache
-capybara-*.html
 .rspec
 .rvmrc
 /.bundle
-/articles/*
+/posts/*
+save_page/
+*.swp

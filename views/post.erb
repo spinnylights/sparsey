@@ -1,0 +1,10 @@
+<article>
+  <header>
+    <h1>
+      <a href="<%= url(post.slug) %>"><%= post.title %></a>
+    </h1>
+  </header>
+  <section class="content">
+    <%= markdown post.content %>
+  </section>
+</article>

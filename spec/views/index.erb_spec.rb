@@ -5,8 +5,11 @@ describe "index.erb", type: :feature do
   include Capybara::DSL
   Capybara.app = Sparsey
 
-  it "has a header" do
+  before(:each) do
     visit '/'
+  end
+
+  it "has a header" do
     page.should have_selector('//header/h1')
   end
 end
