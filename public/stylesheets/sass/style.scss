@@ -1,0 +1,78 @@
+body {
+  width: 830px;
+  margin: 0 auto;
+  text-align: center;
+  color: #444444; 
+  background-color: #fafafb;
+
+  a {
+    color: #444499;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-weight: normal;
+  }
+
+  time, footer>p {
+      font-style: italic;
+      font-size: 17px;
+      color: #80808f;
+    }
+
+  header {
+    h1 {
+      font-family: "Tenderness";
+      font-size: 72px;
+      margin: 40px 0 10px 0;
+      color: #003000;
+    }
+  }
+   
+  article {
+    padding: 0;
+    margin: 0;
+    font-family: "Judson", serif;
+
+    .dingbats {
+      margin: 0;
+      padding: 0;
+      font-size: 48px;
+      color: #009000;
+
+      .star {
+        color: #00c000;
+      }
+    }
+
+    h1 {
+      font-size: 32px;
+
+      a { 
+        text-decoration: none; 
+        color: #444477;
+      }
+
+      a:hover { 
+        text-decoration: underline; 
+        color: #44449a;
+      }
+    }
+
+    section {
+      text-align: left;
+      width: 700px;
+      margin: 0 auto;
+      line-height: 170%;
+      font-size: 21px;
+    }
+  }
+
+  footer:before {
+    content: "· ❦ ·";
+    font-size: 24px; 
+  }
+}

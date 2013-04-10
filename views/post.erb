@@ -1,9 +1,11 @@
 <article>
-  <header>
+    <p class="dingbats">~<span class="star">✧</span>~</p>
     <h1>
       <a href="<%= url(post.slug) %>"><%= post.title %></a>
     </h1>
-  </header>
+    <time class="timeago" datetime="<%= post.date.xmlschema %>">
+      <%= post.date.strftime "%Y/%m/%d" %>
+    </time>
   <section class="content">
     <%= markdown post.content %>
   </section>

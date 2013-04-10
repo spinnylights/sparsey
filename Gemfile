@@ -5,6 +5,7 @@ gem 'rack'
 gem 'thin'
 gem 'redcarpet'
 gem 'psych'
+gem 'sass'
 
 group :test do
   gem 'rspec'
