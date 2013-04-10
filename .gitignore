@@ -2,6 +2,5 @@
 .rspec
 .rvmrc
 /.bundle
-/posts/*
 /spec/save_page/*
 *.swp
