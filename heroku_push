@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+IO.write('revalidation.txt', `git log HEAD~1..HEAD --pretty=format:%h^%ci`)
+
+#puts `git push heroku heroku:master`

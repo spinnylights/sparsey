@@ -3,7 +3,10 @@ require 'time'
 
 class GithubHook < Sinatra::Base
   def self.parse_git
-    sha1, date = `git log HEAD~1..HEAD --pretty=format:%h^%ci`.strip.split('^')
+    unless File.exists?('revalidation.txt')
+      raise 'revalidation.txt does not exist. Please run push_heroku.'
+    end
+    sha1, date = IO.read('revalidation.txt').strip.split('^')
     set :commit_hash, sha1
     set :commit_date, Time.parse(date)
   end

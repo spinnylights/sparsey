@@ -11,13 +11,16 @@ class Sparsey < Sinatra::Base
   set :posts, []
   set :app_file, __FILE__
 
+  Post = Struct.new(:title, :date, :content, :slug)
+  
   Dir.glob "#{root}/posts/*.md" do |file|
     meta, content = File.read(file).split("\n\n", 2)
+    meta = Psych.load(meta)
 
-    post         = OpenStruct.new(Psych.load(meta))
-    post.date    = Time.parse post.date.to_s
-    post.content = content
-    post.slug    = File.basename(file, '.md')
+    post = Post.new(meta['title'], 
+                    Time.parse(meta['date'].to_s),
+                    content,
+                    File.basename(file, '.md'))
 
     get "/#{post.slug}" do
       erb :post, locals: { post: post }

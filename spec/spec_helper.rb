@@ -14,6 +14,7 @@ Sinatra::Base.set :raise_errors, true
 Sinatra::Base.set :logging, false
 
 require File.join(File.dirname(__FILE__), '../lib/sparsey')
+require File.join(File.dirname(__FILE__), '../lib/github_hook')
 require 'view_helpers'
 require 'lib_helpers'
 

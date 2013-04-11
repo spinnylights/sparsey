@@ -7,6 +7,8 @@ require 'sinatra'
 require 'sass/plugin/rack'
 require 'sparsey'
 
+Sparsey.class_eval { 
+
 Sass::Plugin.options[:style] = :compressed
 use Sass::Plugin::Rack
 

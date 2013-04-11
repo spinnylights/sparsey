@@ -3,8 +3,8 @@
     <h1>
       <a href="<%= url(post.slug) %>"><%= post.title %></a>
     </h1>
-    <time class="timeago" datetime="<%= post.date.xmlschema %>">
-      <%= post.date.strftime "%Y/%m/%d" %>
+    <time class="timeago" datetime="<%= Time.parse(post.date.to_s).xmlschema %>">
+      <%= Time.parse(post.date.to_s).strftime "%Y/%m/%d" %>
     </time>
   <section class="content">
     <%= markdown post.content %>

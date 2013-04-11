@@ -1,6 +1,5 @@
 .sass-cache
 .rspec
-.rvmrc
 /.bundle
 /spec/save_page/*
 *.swp
