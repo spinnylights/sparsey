@@ -2,4 +2,4 @@
 
 IO.write('revalidation.txt', `git log HEAD~1..HEAD --pretty=format:%h^%ci`)
 
-#puts `git push heroku heroku:master`
+puts `git push heroku heroku:master`
