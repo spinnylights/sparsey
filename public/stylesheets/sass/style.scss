@@ -1,9 +1,41 @@
+@font-face {
+  font-family: 'Fanwood';
+  src: url('/fonts/fanwood/fanwood-webfont.eot');
+  src: url('/fonts/fanwood/fanwood-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/fanwood/fanwood-webfont.woff'),
+       url('/fonts/fanwood/fanwood-webfont.ttf'),
+       url('/fonts/fanwood/fanwood-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Linden Hill';
+  src: url('/fonts/LindenHill/LindenHill-webfont.eot');
+  src: url('/fonts/LindenHill/LindenHill-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/LindenHill/LindenHill-webfont.woff'),
+       url('/fonts/LindenHill/LindenHill-webfont.ttf'),
+       url('/fonts/LindenHill/LindenHill-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Tenderness';
+  src: url('/fonts/tenderness/tenderness-webfont.eot');
+  src: url('/fonts/tenderness/tenderness-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/tenderness/tenderness-webfont.woff'),
+       url('/fonts/tenderness/tenderness-webfont.ttf'),
+       url('/fonts/tenderness/tenderness-webfont.svg#svgFontName') format('svg');
+}
+
+/* Thanks to The League of Moveable Type (www.theleagueofmoveabletype.com) for
+Fanwood and Linden Hill, and to Font Squirrel (www.fontsquirrel.com) for
+Tenderness! */
+
 body {
   width: 830px;
   margin: 0 auto;
   text-align: center;
   color: #444444; 
   background-color: #fafafb;
+  font-family: 'Fanwood', 'Times New Roman', serif;
 
   a {
     color: #444499;
@@ -35,7 +67,6 @@ body {
   article {
     padding: 0;
     margin: 0;
-    font-family: "Judson", serif;
 
     .dingbats {
       margin: 0;
@@ -49,7 +80,8 @@ body {
     }
 
     h1 {
-      font-size: 32px;
+      font-family: "Linden Hill", serif;
+      font-size: 33px;
 
       a { 
         text-decoration: none; 
@@ -67,8 +99,12 @@ body {
       width: 700px;
       margin: 0 auto;
       line-height: 170%;
-      font-size: 21px;
+      font-size: 22px;
     }
+
+    pre { margin-left: 25px; }
+    
+    code { font-size: 19px; }
   }
 
   footer:before {
